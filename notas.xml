@@ -1,0 +1,17 @@
+Medico: login -> menu (generar prescripcion / ver prescripcion / Ver stock) 
+
+Generar prescripcion: datos paciente, razon de los medicamentos ,fecha de emision, fecha de vencimiento, medicamento(s) y medico a cargo.
+
+Ver prescripcion: Editar o eliminar prescripcion que se eliga.
+
+Ver stock: imagen medicamento, cantidad de cajas, descripcion, fecha de caducidad y nombre.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Farmacia: Login -> menu (Ver prescripcion / administrar medicamento)
+
+Administrar medicamento: imagen, nombre y descripcion. Opciones: ver detalles y eliminar/caducar.
+                        detalles: informacion general del medicamento, stock, opcion para reservar y descontar de stock
+                        eliminar: Ingresa motivo(falta de stock o caducidad) y confirma con el sistema
+
+Prescripcion: Datos del paciente y medicamentos necesarios. (La farmacia no puede editar la receta)
+              Dar la opcion para marcar la receta como entregada.
