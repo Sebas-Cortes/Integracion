@@ -1,0 +1,47 @@
+{% extends 'catalog/pag_template.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Prescripcion | Cesfam</title>
+{% endblock titulo %}
+
+{% block all %}
+<form>
+    <input class="form-control" type="text" placeholder="Rut Paciente">
+    <div class="form-row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="razon">Razon para los medicamentos</label>
+        <textarea class="form-control" id="razon" rows="3"></textarea>
+    </div>
+    <label for="emision">Fecha de emision:</label>
+    <input type="date" id="emision" name="emision">
+    <label for="vencimiento">Fecha de vencimiento:</label>
+    <input type="date" id="vencimiento" name="vencimiento">
+    <div class="form-group">
+        <label for="medicamento"></label>
+        <select class="form-control" id="medicamento">
+            <option>PARACETAMOL</option>
+            <option>AMOXICILINA</option>
+            <option>IBUPROFENO</option>
+            <option>LOSARTAN</option>
+            <option>LACTULOSA </option>
+        </select>
+    </div>
+    <input class="form-control" type="text" placeholder="Rut Medico">
+    <div class="form-row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre Medico">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Apellido Medico">
+        </div>
+    </div>
+</form>
+{% endblock all %}

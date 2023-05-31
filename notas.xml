@@ -2,7 +2,7 @@ Medico: login -> menu (generar prescripcion / ver prescripcion / Ver stock)
 
 Generar prescripcion: datos paciente, razon de los medicamentos ,fecha de emision, fecha de vencimiento, medicamento(s) y medico a cargo.
 
-Ver prescripcion: Editar o eliminar prescripcion que se eliga.
+Ver prescripcion: Editar o eliminar prescripcion que se eliga.(falta la opcion de editar)
 
 Ver stock: imagen medicamento, cantidad de cajas, descripcion, fecha de caducidad y nombre.
 

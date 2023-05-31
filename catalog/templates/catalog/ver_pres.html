@@ -1,0 +1,52 @@
+{% extends 'catalog/pag_template.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Prescripciones| CESFAM</title>
+{% endblock titulo %}
+
+{% block all %}
+<div class="row row-cols-2 row-cols-md-4 mt-2 mb-4 gy-3">
+    <!--divisor para las card, hacer que esten dentro de la misma fila-->
+    <!--{% for p in productos %}-->
+    <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem;">
+        <br><img src="#" class="card-img-top" alt="..." style="width:190px;height:155px;">
+        <div class="card-body">
+            <br>
+            <h5 class="card-title">"nombre paciente | rut paciente"</h5>
+            <p class="card-text" style="font-size: 16px; color: rgb(255, 255, 255);"><b>"Fecha emision"</b></p>
+            <p class="card-text" style="font-size: 16px; color: rgb(255, 255, 255);"><b>"Medico a cargo"</b></p>
+            <a href="#" class="btn btn-primary mb-3">Ver detalles</a>
+            <!--poner href la url como sale abajo, para ver el detalle del producto-->
+            <div class="col-md-10">
+                <a href="#" class="btn btn-warning">Editar Prescripcion</a>
+            </div>
+            <a href="#" class="btn btn-danger my-1">Eliminar</a>
+        </div>
+    </div>
+    <!--{% endfor %}-->
+</div>
+<!--
+    {% for m in messages %}
+    {% if 'success' in m.tags %}
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '{{m}}',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    </script>
+    {% else %}
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: '{{m}}',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    </script>
+    {% endif %}
+    {% endfor %}
+    -->
+{% endblock all %}
