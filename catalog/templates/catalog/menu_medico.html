@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'catalog/pag_template.html' %}
+{% load static %}
 
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{% static 'catalog/img/logo.png' %}">
-    <title>¡Bienvenido!| Cesfam</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lobster&display=swap"
-        rel="stylesheet">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link href="{% static 'project/css/css_catalog.css' %}" type="text/css" rel="stylesheet">
-    <!--link necesario para css-->
-</head>
+{% block titulo %}
+<title>¡Bienvenido!| Cesfam</title>
+{% endblock titulo %}
 
+<<<<<<< HEAD
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-4">
@@ -66,82 +48,53 @@
         </nav>
 
         <!--<h1 class="text" style="text-align: center; color: rgb(0, 76, 255); font-family: Lobster; "><br><b>Generar
+=======
+{% block all %}
+<!--<h1 class="text" style="text-align: center; color: rgb(0, 76, 255); font-family: Lobster; "><br><b>Generar
+>>>>>>> 1b55ccb904c2a7a534eea61000762445c642aec0
                 prescripciones<b></h1>
                 -->
-        <div class="row row-cols-2 row-cols-md-4 mt-2 mb-4 gy-3">
-            <!--divisor para las card, hacer que esten dentro de la misma fila-->
-            <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem;">
-                <br><img src="#" class="card-img-top" alt="..." style="width:190px;height:155px;">
-                <div class="card-body">
-                    <br>
-                    <a href="#" class="btn btn-primary mb-3">Crear prescripciones</a> <!--CREAR HTML Y CODIGO-->
-                    <!--poner href la url como sale abajo, para ver el detalle del producto-->
-                    <div class="col-md-10">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-cols-2 row-cols-md-4 mt-2 mb-4 gy-3">
-            <!--divisor para las card, hacer que esten dentro de la misma fila-->
-            <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem;">
-                <br><img src="#" class="card-img-top" alt="..." style="width:190px;height:155px;">
-                <div class="card-body">
-                    <br>
-                    <a href="#" class="btn btn-primary mb-3">Ver prescripciones</a><!--CREAR HTML Y CODIGO-->
-                    <!--poner href la url como sale abajo, para ver el detalle del producto-->
-                    <div class="col-md-10">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row row-cols-2 row-cols-md-4 mt-2 mb-4 gy-3">
-            <!--divisor para las card, hacer que esten dentro de la misma fila-->
-            <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem;">
-                <br><img src="#" class="card-img-top" alt="..." style="width:190px;height:155px;">
-                <div class="card-body">
-                    <br>
-                    <a href="#" class="btn btn-primary mb-3">Ver stock medicamentos</a><!--CREAR HTML Y CODIGO-->
-                    <!--poner href la url como sale abajo, para ver el detalle del producto-->
-                    <div class="col-md-10">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-</body>
-
-<footer class="container-fluid">
-    <div class="bg-dark text-center p-2" style="color: rgb(0, 166, 255);">
-        <h5>Sistema de Cesfam</h5>
-        <form class="container-fluid justify-content-start">
-            <div class="container-fluid bg-dark text-center">
-                <p style="color: rgb(0, 166, 255);">Nuestras Redes Sociales</p>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                    <a class="hipervinculo" href="https://www.facebook.com"
-                        style="text-decoration: none; color: rgb(0, 166, 255);">Facebook</a></button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                    <a class="hipervinculo" href="https://twitter.com"
-                        style="text-decoration: none; color: rgb(0, 166, 255);">Twitter</a></button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                    <a class="hipervinculo" href="https://www.instagram.com"
-                        style="text-decoration: none; color: rgb(0, 166, 255);">Instagram</a></button>
-            </div>
-        </form>
-        <div class="container-fluid bg-dark text-center">
+<div class="row row-cols-2 row-cols-md-4 mt-2 mb-4 gy-3">
+    <!--divisor para las card, hacer que esten dentro de la misma fila-->
+    <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem;">
+        <br><img src="#" class="card-img-top" alt="..." style="width:190px;height:155px;">
+        <div class="card-body">
             <br>
-            <p style="color: rgb(0, 166, 255);">®Derechos Reservados :: DuocUC :: Chile 2023</p>
+            <a href="{% url 'catalog:prescripcion_crear' %}" class="btn btn-primary mb-3">Crear prescripciones</a>
+            <!--MEJORAR-->
+            <!--poner href la url como sale abajo, para ver el detalle del producto-->
+            <div class="col-md-10">
+            </div>
         </div>
     </div>
-</footer>
+</div>
 
-</html>
+<div class="row row-cols-2 row-cols-md-4 mt-2 mb-4 gy-3">
+    <!--divisor para las card, hacer que esten dentro de la misma fila-->
+    <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem;">
+        <br><img src="#" class="card-img-top" alt="..." style="width:190px;height:155px;">
+        <div class="card-body">
+            <br>
+            <a href="#" class="btn btn-primary mb-3">Ver prescripciones</a><!--CREAR HTML Y CODIGO-->
+            <!--poner href la url como sale abajo, para ver el detalle del producto-->
+            <div class="col-md-10">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row row-cols-2 row-cols-md-4 mt-2 mb-4 gy-3">
+    <!--divisor para las card, hacer que esten dentro de la misma fila-->
+    <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem;">
+        <br><img src="#" class="card-img-top" alt="..." style="width:190px;height:155px;">
+        <div class="card-body">
+            <br>
+            <a href="#" class="btn btn-primary mb-3">Ver stock medicamentos</a><!--MEJORAR-->
+            <!--poner href la url como sale abajo, para ver el detalle del producto-->
+            <div class="col-md-10">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock all %}
