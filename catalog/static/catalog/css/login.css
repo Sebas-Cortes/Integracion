@@ -99,9 +99,9 @@ body {
 }
 
 .form-body button:hover {
-    color: rgb(12, 101, 235);
+    color: rgb(12, 202, 235);
     border: 2px solid rgb(79, 200, 216);
-    background: rgb(0, 77, 243);
+    background: rgb(0, 227, 243);
 }
 .warnings{
     width: 200px;
