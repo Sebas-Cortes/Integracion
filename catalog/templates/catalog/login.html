@@ -59,13 +59,11 @@
   <div class="form-body">
     <img src="{% static 'catalog/img/loginincon.png' %}" alt="user-login">
     <p class="text">Inicio de Sesión</p>
-    <form class="login-form" action="#" method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-      <label></label>
-      <form>
-        <input style="border-color: blue;" type="text" name="user" placeholder="Nombre de usuario">
-        <input style="border-color: blue;" type="password" name="pass" placeholder="Contraseña">
-        <button  name="iniciar sesión">iniciar sesión</button>
+    
+    <form class="login-form" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"  name="iniciar sesión">iniciar sesión</button>
         </form>
   </div>
   <!--

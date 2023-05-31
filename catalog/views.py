@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.contrib.auth.views import LoginView
+from .forms import LoginForm
 # Create your views here.
 
 def login(request):
@@ -12,4 +13,8 @@ def prescripcion_crear(request):
     return render(request, 'catalog/prescripcion_crear.html')
 def ver_pres(request):
     return render(request, 'catalog/ver_pres.html')
+
+class CustomLoginView(LoginView):
+    template_name = "catalog/login.html"
+    form_class = LoginForm
 
