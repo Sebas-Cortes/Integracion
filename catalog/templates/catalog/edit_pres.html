@@ -1,0 +1,60 @@
+{% extends 'catalog/pag_template.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>"paciente.nombrepaciente"| Editar | CESFAM</title>
+{% endblock titulo %}
+
+{% block all %}
+<form action=" '% url 'project:editarP' producto.id_Producto %' method=" POST" id="agregarP"
+    enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6 col-sm-12 mt-3 mb-3">
+            <div class="form-group">
+                <label for="nombreProducto"> "Nombre, Apellido y rut del paciente" </label>
+            </div>
+
+            <div class="form-group">
+                <label for="presc">Razon para el cambio de prescripcion</label>
+                <textarea id="presc" name="presc" class="form-control mt-1 mb-2" rows="4"
+                    placeholder="Ingre el motivo por el cual edita la receta"></textarea>
+                <p class="msjAlerta" id="msjPresc"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcionCorta">caracteristicas de producto</label>
+                <input type="text" class="form-control mt-1 mb-2" name="caracteristicas" id="caracteristicas"
+                    placeholder="Ingresar caracteristicas del producto" required value="{{ producto.caracteristicas }}">
+                <p class="msjAlerta" id="msjCorta"></p>
+            </div>
+
+            <label for="edicion">Fecha de edición:</label>
+            <input type="date" id="edicion" name="edicion">
+            <label for="vencimiento">Nueva fecha de vencimiento:</label>
+            <input type="date" id="vencimientoN" name="vencimientoN">
+
+            <!--agregar for para que se muestren todos los medicamentos (no se como mas hacerlo :c )-->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="1">
+                <label class="form-check-label" for="flexCheckDefault">
+                    PARACETAMOL
+                </label>
+            </div>
+            <!--agregar for para que se muestren todos los medicamentos (no se como mas hacerlo :c )-->
+
+            <input class="form-control" type="text" placeholder="Rut Medico ">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Nombre Medico">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Apellido Medico">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary px-3 mt-3">Guardar Cambios</button>
+        </div>
+    </div>
+</form>
+{% endblock all %}

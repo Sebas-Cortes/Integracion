@@ -13,6 +13,8 @@ def prescripcion_crear(request):
     return render(request, 'catalog/prescripcion_crear.html')
 def ver_pres(request):
     return render(request, 'catalog/ver_pres.html')
+def edit_pres(request):
+    return render(request, 'catalog/edit_pres.html')
 
 class CustomLoginView(LoginView):
     template_name = "catalog/login.html"

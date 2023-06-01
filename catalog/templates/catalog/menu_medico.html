@@ -2,72 +2,70 @@
 {% load static %}
 
 {% block titulo %}
-<title >¡Bienvenido!| Cesfam</title>
+<title>¡Bienvenido!| Cesfam</title>
 {% endblock titulo %}
+
 {% block all %}
-<body>
-
-
-    <div class="container-fluid">   
-
-
-
-        <!--<h1 class="text" style="text-align: center; color: rgb(0, 76, 255); font-family: Lobster; "><br><b>Generar
+<div class="container-fluid">
+    <!--<h1 class="text" style="text-align: center; color: rgb(0, 76, 255); font-family: Lobster; "><br><b>Generar
                 prescripciones<b></h1>
                 -->
-                <div class="row carta ">
-                    <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem; margin-top: 10%; margin-bottom: 10%;">
-                        <br><img src="{% static 'catalog/img/crearprescripcion.jpg' %}" class="card-img-top" alt="..." style="width:190px;height:155px;">
-                        <div class="form-body">
-                            <br>
-                            <div class="h5" style="text-decoration-color: black;">Prescripciones</div>
-                            
-                            <div class="row">
-                                <div class="col-4"></div>
-                                <div class="col-4"><a href="{% url 'prescripcion_crear' %}" class="btn btn-primary mb-3">Crear</a></div>
-                                <div class="col-4"></div>
-                            </div>
-                            <!--MEJORAR-->
-                            <!--poner href la url como sale abajo, para ver el detalle del producto-->
-                            <div class="col-md-10">
-                            </div>
-                        </div>
+    <div class="row carta ">
+        <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto"
+            style="width: 15rem; margin-top: 10%; margin-bottom: 10%;">
+            <br><img src="{% static 'catalog/img/crearprescripcion.jpg' %}" class="card-img-top" alt="..."
+                style="width:190px;height:155px;">
+            <div class="form-body">
+                <br>
+                <div class="h5" style="text-decoration-color: black;">Prescripciones</div>
+
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4"><a href="{% url 'prescripcion_crear' %}" class="btn btn-primary mb-3">Crear</a>
                     </div>
-                    <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem; margin-top: 10%; margin-bottom: 10%;">
-                        <br><img src="{% static 'catalog/img/verprescripcion.jpg' %}" class="card-img-top" alt="..." style="width:190px;height:155px;">
-                        <div class="form-body">
-                            <br>
-                            <div class="h5" style="text-decoration-color: black;">Prescripciones</div>
-                            
-                            <div class="row">
-                                <div class="col-4"></div>
-                                <div class="col-4"><a href="#" class="btn btn-primary mb-3">Ver</a></div>
-                                <div class="col-4"></div>
-                            </div>
-                            <!--CREAR HTML Y CODIGO-->
-                            <!--poner href la url como sale abajo, para ver el detalle del producto-->
-                            <div class="col-md-10">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto" style="width: 15rem; margin-top: 10%; margin-bottom: 10%;">
-                        <br><img src="{% static 'catalog/img/verprescripcion.jpg' %}" class="card-img-top" alt="..." style="width:190px;height:155px;">
-                        <div class="form-body">
-                            <br>
-                            <div class="h5" style="text-decoration-color: black;">Stock medicamentos</div>
-                            <div class="row">
-                                <div class="col-4"></div>
-                                <div class="col-4"><a href="{% url 'medicamento' %}" class="btn btn-primary mb-3">Ver</a></div>
-                                <div class="col-4"></div>
-                            </div>
-                            <!--MEJORAR-->
-                            <!--poner href la url como sale abajo, para ver el detalle del producto-->
-                            <div class="col-md-10">
-                            </div>
-                        </div>
+                    <div class="col-4"></div>
                 </div>
+                <!--MEJORAR-->
+                <!--poner href la url como sale abajo, para ver el detalle del producto-->
+                <div class="col-md-10">
+                </div>
+            </div>
+        </div>
+        <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto"
+            style="width: 15rem; margin-top: 10%; margin-bottom: 10%;">
+            <br><img src="{% static 'catalog/img/verprescripcion.jpg' %}" class="card-img-top" alt="..."
+                style="width:190px;height:155px;">
+            <div class="form-body">
+                <br>
+                <div class="h5" style="text-decoration-color: black;">Prescripciones</div>
 
-
-
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4"><a href="{% url 'ver_pres' %}" class="btn btn-primary mb-3">Ver</a></div>
+                    <div class="col-4"></div>
+                </div>
+                <!--CREAR HTML Y CODIGO-->
+                <div class="col-md-10">
+                </div>
+            </div>
+        </div>
+        <div class="card , col-md-3 col-sm-12  col-xs-12, mx-auto"
+            style="width: 15rem; margin-top: 10%; margin-bottom: 10%;">
+            <br><img src="{% static 'catalog/img/verprescripcion.jpg' %}" class="card-img-top" alt="..."
+                style="width:190px;height:155px;">
+            <div class="form-body">
+                <br>
+                <div class="h5" style="text-decoration-color: black;">Stock medicamentos</div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4"><a href="{% url 'medicamento' %}" class="btn btn-primary mb-3">Ver</a></div>
+                    <div class="col-4"></div>
+                </div>
+                <!--MEJORAR-->
+                <div class="col-md-10">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock all %}
