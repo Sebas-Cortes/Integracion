@@ -15,6 +15,12 @@ def ver_pres(request):
     return render(request, 'catalog/ver_pres.html')
 def edit_pres(request):
     return render(request, 'catalog/edit_pres.html')
+def menu_farmacia(request):
+    return render(request, 'catalog/menu_farmacia.html')
+def ver_meds(request):
+    return render(request, 'catalog/ver_meds.html')
+def presc_farm(request):
+    return render(request, 'catalog/presc_farm.html')
 
 class CustomLoginView(LoginView):
     template_name = "catalog/login.html"

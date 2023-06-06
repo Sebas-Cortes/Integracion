@@ -15,3 +15,5 @@ Administrar medicamento: imagen, nombre y descripcion. Opciones: ver detalles y 
 
 Prescripcion: Datos del paciente y medicamentos necesarios. (La farmacia no puede editar la receta)
               Dar la opcion para marcar la receta como entregada.
+
+FRONT END mayormente completado, ver detalles de interfaz, agregar o quitar e implementar funcionalidad.
