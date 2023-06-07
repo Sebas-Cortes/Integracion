@@ -72,3 +72,31 @@ def agregar_medicamento(request, id):
                 'prescripcion' : pres,}
 
     return render(request, 'catalog/agregar_medicamento.html', contexto)
+
+def listar(request):
+    receta= Receta.objects.all()
+    data ={
+        'receta':receta
+    }
+    return render (request,'catalog/ver_pres.html',data)
+
+def eliminar_medicamento(request,codigo):
+    
+    medicamento = Receta.objects.get(pk=codigo)
+    pres=medicamento.prescripcion
+    medicamento.delete()
+    return redirect ('prescripcion',id=pres.idPrescripcion)
+        
+def listar_pres(request):
+    prescripcion= Prescripcion.objects.all()
+    data={
+        'prescripcion':prescripcion
+    }
+    return render (request,'catalog/ver_pres.html',data)
+
+def eliminar_pres(request,id):
+    
+    pres = Prescripcion.objects.get(pk=id)
+    pres.delete()
+
+    return redirect ('ver_pres')

@@ -1,19 +1,35 @@
 {% extends 'catalog/presc_template.html' %}
 {% load static %}
 
-{% block titulo %}
-<title>Prescripciones| CESFAM</title>
-{% endblock titulo %}
 
 
-{% block nombre %}
-"Nombre y Rut paciente"
-{% endblock nombre %}
 
-{% block emision %}
-"Fecha de emision"
-{% endblock emision %}
+{% block all %}
 
-{% block medico %}
-"Medico a cargo"
-{% endblock medico %}
+{% for v in prescripcion %}
+    <div class="card"
+        style="height: 50%;width: 90%;border-color: black; margin-top: 10%; margin-bottom: 10%; margin-left: 5%;margin-right: 5%;"
+        style="width: 15rem;">
+        
+        <div class="card-body">
+            
+            <p class="card-text" style="font-size: 16px; color: rgb(0, 0, 0);"><b>
+                Numero de prescripción: {{ v.idPrescripcion }}
+                </b></p>
+            <p class="card-text" style="font-size: 16px; color: rgb(0, 0, 0);"><b>
+                Rut del paciente:{{ v.rutPaciente }}
+                </b></p>
+            <p class="card-text" style="font-size: 16px; color: rgb(0, 0, 0);"><b>
+                medico: {{ v.medico }}
+                </b></p>
+            <p class="card-text" style="font-size: 16px; color: rgb(0, 0, 0);"><b>
+                estado: {{ v.estado }}
+                </b></p> 
+            <p class="card-text" style="font-size: 16px; color: rgb(0, 0, 0);"><b>
+                fecha: {{ v.fecha }}
+                </b></p>        
+                <a href="{% url 'prescripcion' v.idPrescripcion %}" class="btn btn-primary mb-3; text-decoration:none;" >Ver prescripción</a>                
+        </div>
+    </div>
+{% endfor %}
+{% endblock all %}

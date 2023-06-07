@@ -21,15 +21,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lobster&display=swap"
         rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link href="{% static 'project/css/css_catalog.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'catalog/css/css_catalog.css' %}" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!--link necesario para css-->
 </head>
 
 <body>
-    <div class="container">
-        <div class="row mb-5">
-            <div class="bg-primary fixed-top ">
+    <div class="container-fluid ">
+        <div class="row mb-5 sticky-top">
+            <div class="bg-primary  " style="margin-top:0%;">
                 <div class="row ">
                     <div class="container bg-primary fixed-top ">
                         <br>
@@ -63,29 +63,7 @@
     </div>
 </body>
 
-<footer class="container-xxl mt-5; fixed-bottom">
-    <br>
-    <br>
-    <div class="bg-dark text-center p-2" style="color: white;">
-        <form class="container-xxl justify-content-start">
-            <div class="container-fluid bg-dark text-center">
-                <p style="color: white;">Nuestras Redes Sociales</p>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                    <a class="hipervinculo" href="https://www.facebook.com"
-                        style="text-decoration: none; color: white;">Facebook</a></button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                    <a class="hipervinculo" href="https://twitter.com"
-                        style="text-decoration: none; color: white;">Twitter</a></button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">
-                    <a class="hipervinculo" href="https://www.instagram.com"
-                        style="text-decoration: none; color: white;">Instagram</a></button>
-            </div>
-        </form>
-        <div class="container-fluid bg-dark text-center">
-            <br>
-            <p style="color: white;">®Derechos Reservados :: DuocUC :: Chile 2022</p>
-        </div>
-    </div>
-</footer>
+
+
 
 </html>

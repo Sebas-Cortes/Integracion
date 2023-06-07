@@ -6,20 +6,59 @@
 {% endblock titulo %}
 
 {% block all %}
-<div class="row text-center">
-    <h1 class="text-black">Prescripcion Nroº: {{ prescripcion.idPrescripcion }}</h1>
+<div class="row text-start justify-content-center">
+
+    <div class="card" style="height: 50%;width: 90%;border-color: black;">
+        <br>
+    <br>
+
+    <br>
+        <h1 class="card-title;text-black">Prescripcion Nroº: {{ prescripcion.idPrescripcion }}</h1>
+    
+    <div class="row">
+        <h2 class="text-black">Rut del paciente: {{ prescripcion.rutPaciente }}</h2>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <a href="{% url 'agregar_medicamento' id=prescripcion.idPrescripcion %}" class="btn btn-primary mb-3; text-decoration:none;" >Agregar medicamento</a>
+            <a href="{% url 'eliminar_pres' id=prescripcion.idPrescripcion %}" class="btn btn-primary mb-3; text-decoration:none;" >Eliminar prescripción</a>                
+
+        </div>
+        <div class="col-8"></div>
+    </div>
+    <div class="row">
+        <div class="card-body justify-content-start">
+            <h3 class="card-tittle;text-black;text-decoration:none">Medicamentos para esta prescripcion:</h3>
+            {% for receta in lista %}
+            <div class="container " style="border-style: outset;">
+                <h3 class="card-text;text-black">Nombre del medicamento: {{ receta.medicamento }}</h3>
+                <h3 class="card-text;text-black">Cantidad del medicamento: {{ receta.cantidad }}</h3>
+                <a href="{% url 'eliminar_medicamento' receta.idReceta %}" class="btn btn-primary mb-3; text-decoration:none;" >Eliminar medicamento</a>                
+
+                <br>
+            </div>
+
+            <br>
+
+
+            {% endfor %}
+            <a href="{% url 'menu_medico' %}"
+            class="btn btn-primary mb-3; text-decoration:none;"style="text-decoration:none ; color: white;">Volver al menu</a>
+
+
+        </div>
+        <br>
+
+    </div>
+    <br><br>
+<br><br>
+<br><br>
+<br><br><br>
+<br><br>
+<br><br>
+<br>
 </div>
-<div class="row">
-    <h1 class="text-black">Rut del paciente: {{ prescripcion.rutPaciente }}</h1>
-</div>
-<div class="row">
-    <a href="{% url 'agregar_medicamento' id=prescripcion.idPrescripcion %}" class="btn btn-success">Agregar medicamento</a>
-</div>
-<div class="row">
-    <h1 class="text-black">Medicamentos para esta prescripcion:</h1>
-    {% for receta in lista %}
-    <h2 class="text-black">Nombre: {{ receta.medicamento }}</h2>
-    <h2 class="text-black">Cantidad: {{ receta.cantidad }}</h2>
-    {% endfor %}
-</div>
+
+      </div>
+
 {% endblock all %}
