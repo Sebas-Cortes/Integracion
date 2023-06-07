@@ -1,4 +1,4 @@
-{% extends 'catalog/pag_template.html' %}
+{% extends 'catalog/edit_pres_template.html' %}
 {% load static %}
 
 {% block titulo %}
@@ -6,7 +6,7 @@
 {% endblock titulo %}
 
 {% block all %}
-<form action=" '% url 'project:editarP' producto.id_Producto %' method=" POST" id="agregarP"
+<form action=" '% url 'project:editarP' producto.id_Producto %' method=POST" id="agregarP"
     enctype="multipart/form-data">
     {% csrf_token %}
     <div class="row">
