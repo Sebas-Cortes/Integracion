@@ -39,8 +39,14 @@
                     </div>
                     <div class="col-9"></div>
                     <div class="col" style="justify-content: end;">
-                        <li><a href="{% url 'logout' %}">Salir</a></li>
+
+                        <a style="border-color: #001a57;" class="btn btn-primary"  href="{% url 'logout' %}">Salir</a>
+ 
                     </div>
+                </div>
+                <div class="row">
+                    <p class="h5" style="font-family:Goldman;text-decoration:none ; color: white;opacity: 0.5;">Sistema de gestión médica</p>
+                  </div>
                 </div>
             </div>
         </div>
@@ -79,7 +85,7 @@
         crossorigin="anonymous"></script>
 </body>
 
-<footer class="container-xxl">
+<footer class="container-xxl; fixed-bottom">
     <div class="bg-dark text-center p-2" style="color: white;">
         <form class="container-xxl justify-content-start">
             <div class="container-fluid bg-dark text-center">

@@ -27,37 +27,29 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-4">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" style="font-family:Goldman; font-size: 20px;"><b>CESFAM</b></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link " href="#"><b>Principal</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><b>Pacientes</b></a>
-                        </li>
-                    </ul>
-                    </li>
-                    </ul>
-                    <form class="d-flex">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><b>Usuario</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-nowrap" href="#">Cerrar Sesión</a>
-                        </li>
-
-                    </form>
+        <div class="container-xxl">
+            <div class="row ">
+                <div class="container bg-primary fixed-top ">
+                    <br>
+                    <div class="row">
+                        <br>
+                        <div class="col" style="justify-content: start;">
+                            <a href="{% url 'menu_medico' %}" class="h1 "
+                                style="font-family:Goldman;text-decoration:none ; color: white;">CESFAM</a>
+                        </div>
+                        <div class="col-9"></div>
+                        <div class="col" style="justify-content: end;">
+    
+                            <a style="border-color: #001a57;" class="btn btn-primary"  href="{% url 'logout' %}">Salir</a>
+ 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="h5" style="font-family:Goldman;text-decoration:none ; color: white;opacity: 0.5;">Sistema de gestión médica</p>
+                      </div>
+                    </div>
                 </div>
             </div>
-        </nav>
         <!--{% for p in productos %}-->
         <div class="card mb-3" style="max-width: 1340px;">
             <div class="row g-0">
@@ -95,9 +87,9 @@
         crossorigin="anonymous"></script>
 </body>
 
-<footer class="container-fluid">
+<footer class="container-xxl; fixed-bottom">
     <div class="bg-dark text-center p-2" style="color: white;">
-        <form class="container-fluid justify-content-start">
+        <form class="container-xxl justify-content-start">
             <div class="container-fluid bg-dark text-center">
                 <p style="color: white;">Nuestras Redes Sociales</p>
                 <button class="btn btn-sm btn-outline-secondary" type="button">

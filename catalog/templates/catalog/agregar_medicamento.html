@@ -6,7 +6,9 @@
 {% endblock titulo %}
 
 {% block all %}
-<form action="{% url 'agregar_medicamento' prescripcion.idPrescripcion %}" method="POST">
+<form action="{% url 'agregar_medicamento' prescripcion.idPrescripcion %}" method="POST"> 
+    <br>
+    <br><br>
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-success">Agregar</button>

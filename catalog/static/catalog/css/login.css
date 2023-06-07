@@ -99,9 +99,9 @@ body {
 }
 
 .form-body button:hover {
-    color: rgb(12, 202, 235);
-    border: 2px solid rgb(79, 200, 216);
-    background: rgb(0, 227, 243);
+    color: rgb(16, 153, 177);
+    border: 2px solid rgb(24, 133, 148);
+    background: rgb(20, 142, 151);
 }
 .warnings{
     width: 200px;
@@ -110,3 +110,26 @@ body {
     color: #B06AB3;
     padding-top: 20px;
 }
+.boton{
+    color: #477cee !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: #318aac;
+    border: 2px solid;
+    border-color: #318aac;
+    position: relative;
+  }
+  .boton:before {
+    content:"";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 1s ease;
+  }
+  .boton:hover:before {
+  width: 100%;
+  }
