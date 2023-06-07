@@ -1,0 +1,14 @@
+{% extends 'catalog/presc_crear_template.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Agregar medicamento | Cesfam</title>
+{% endblock titulo %}
+
+{% block all %}
+<form action="{% url 'agregar_medicamento' prescripcion.idPrescripcion %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Agregar</button>
+</form>
+{% endblock all %}

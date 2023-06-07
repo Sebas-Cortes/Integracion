@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth.views import LogoutView
-from .views import CustomLoginView, login,menu_medico, medicamento, prescripcion_crear,ver_pres,edit_pres, menu_farmacia, ver_meds, presc_farm
+from .views import CustomLoginView, agregar_medicamento, login,menu_medico, medicamento, prescripcion, prescripcion_crear,ver_pres,edit_pres, menu_farmacia, ver_meds, presc_farm
 
 urlpatterns = [
     path('', CustomLoginView.as_view(), name="login"),
@@ -13,4 +13,6 @@ urlpatterns = [
     path('menu_farmacia', menu_farmacia, name='menu_farmacia'),
     path('ver_meds', ver_meds, name='ver_meds'),
     path('presc_farm', presc_farm, name='presc_farm'),
+    path('prescripcion<int:id>', prescripcion, name='prescripcion'),
+    path('agregar_medicamento<int:id>', agregar_medicamento, name='agregar_medicamento')
 ]

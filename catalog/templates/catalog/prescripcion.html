@@ -1,0 +1,25 @@
+{% extends 'catalog/presc_crear_template.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Prescripcion | Cesfam</title>
+{% endblock titulo %}
+
+{% block all %}
+<div class="row text-center">
+    <h1 class="text-black">Prescripcion Nroº: {{ prescripcion.idPrescripcion }}</h1>
+</div>
+<div class="row">
+    <h1 class="text-black">Rut del paciente: {{ prescripcion.rutPaciente }}</h1>
+</div>
+<div class="row">
+    <a href="{% url 'agregar_medicamento' id=prescripcion.idPrescripcion %}" class="btn btn-success">Agregar medicamento</a>
+</div>
+<div class="row">
+    <h1 class="text-black">Medicamentos para esta prescripcion:</h1>
+    {% for receta in lista %}
+    <h2 class="text-black">Nombre: {{ receta.medicamento }}</h2>
+    <h2 class="text-black">Cantidad: {{ receta.cantidad }}</h2>
+    {% endfor %}
+</div>
+{% endblock all %}

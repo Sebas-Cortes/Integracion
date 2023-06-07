@@ -27,32 +27,27 @@
 </head>
 
 <body>
-    <div class="container-xxl">
-        <div class="row ">
-            <div class="container bg-primary fixed-top ">
-                <br>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="bg-primary fixed-top ">
                 <div class="row">
                     <br>
                     <div class="col" style="justify-content: start;">
                         <a href="{% url 'menu_medico' %}" class="h1 "
                             style="font-family:Goldman;text-decoration:none ; color: white;">CESFAM</a>
+                        <a class="btn btn-danger float-end mt-1" href="{% url 'logout' %}">Salir</a>
                     </div>
-                    <div class="col-9"></div>
-                    <li><a class="dropdown-item" href="{% url 'logout' %}">Salir</a></li>
                 </div>
             </div>
         </div>
-    </div>
     {% block all %}
 
     {% endblock all %}
+    
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
 </body>
 
-<footer class="container-xxl">
+<footer class="container-xxl mt-5">
     <div class="bg-dark text-center p-2" style="color: white;">
         <form class="container-xxl justify-content-start">
             <div class="container-fluid bg-dark text-center">

@@ -6,48 +6,14 @@
 {% endblock titulo %}
 
 {% block all %}
-<div class="container">
     <div class="row justify-content-center">
-        <div class="col-lg-6">
-            <form>
-                <input class="form-control" type="text" placeholder="Rut Paciente">
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Apellido">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="razon">Razon para los medicamentos</label>
-                    <textarea class="form-control" id="razon" rows="3"></textarea>
-                </div>
-                <label for="emision">Fecha de emision:</label>
-                <input type="date" id="emision" name="emision">
-                <label for="vencimiento">Fecha de vencimiento:</label>
-                <input type="date" id="vencimiento" name="vencimiento">
+        <div class="col-6 mt-5">
+            <form action="{% url 'prescripcion_crear' %}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
 
-                <!--agregar for para que se muestren todos los medicamentos (no se como mas hacerlo :c )-->
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="1">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        PARACETAMOL
-                    </label>
-                </div>
-                <!--agregar for para que se muestren todos los medicamentos (no se como mas hacerlo :c )-->
-                <input class="form-control" type="text" placeholder="Rut Medico">
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Nombre Medico">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Apellido Medico">
-                    </div>
-                </div>
                 <button type="submit" class="btn btn-primary">Crear</button>
             </form>
         </div>
     </div>
-</div>
 {% endblock all %}
