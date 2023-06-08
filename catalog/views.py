@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
 
 from catalog.models import Prescripcion, Receta
-from .forms import LoginForm, PrescripcionForm, RecetaForm
+from .forms import LoginForm, PrescripcionForm, RecetaForm, UserForm
 from django.contrib import messages
+from django.contrib.admin.views.decorators import staff_member_required
 # Create your views here.
 
 def login(request):
@@ -100,3 +101,19 @@ def eliminar_pres(request,id):
     pres.delete()
 
     return redirect ('ver_pres')
+
+@staff_member_required
+def registro(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            nick1 = form.cleaned_data['username']
+            messages.success(request, f'Usuario {nick1} creado con exito')
+            return redirect('menu_medico')
+    else:
+        form = UserForm()
+
+    contexto = { 'form' : form }
+
+    return render(request,'catalog/registro.html', contexto)

@@ -40,12 +40,20 @@
                     <div class="col-9"></div>
                     <div class="col" style="justify-content: end;">
                         <a style="border-color: #001a57;" class="btn btn-primary"  href="{% url 'logout' %}">Salir</a>
+                        {% if request.user.is_staff %}
+                        <a style="border-color: #001a57;" class="btn btn-danger"  href="{% url 'registro' %}">registrar un usuario</a>
                         
+                      {% endif %} 
                     </div>
                 </div>
                 <div class="row">
                     <p class="h5" style="font-family:Goldman;text-decoration:none ; color: white;opacity: 0.5;">Sistema de gestión médica</p>
-                  </div>
+                    {% if request.user.is_staff %}
+                    <div class="container bg-danger bg-opacity-75">
+                        <h1 id="titulo" class="text-white d-flex justify-content-center"> vista de Moderador</h1> 
+                    </div>
+                  {% endif %}  
+                </div>
             </div>
 
         </div>
