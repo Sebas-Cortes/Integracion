@@ -19,6 +19,7 @@ def prescripcion_crear(request):
         form = PrescripcionForm(request.POST)
         if form.is_valid():
             rut = form.cleaned_data['rutPaciente']
+            id = form.instance.idPrescripcion
             try:
                 Prescripcion.objects.get(rutPaciente = rut, estado = True)
                 messages.error(request, f'Ya existe una prescripcion para el rut: {rut}')
