@@ -18,11 +18,16 @@ def prescripcion_crear(request):
     if request.method == 'POST':
         form = PrescripcionForm(request.POST)
         if form.is_valid():
-            form.save()
             rut = form.cleaned_data['rutPaciente']
-            id = form.instance.idPrescripcion
-            messages.success(request, f'Prescripcion para el rut: {rut} creada con exito')
-            return redirect('prescripcion', id=id)
+            try:
+                Prescripcion.objects.get(rutPaciente = rut, estado = True)
+                messages.error(request, f'Ya existe una prescripcion para el rut: {rut}')
+                return redirect('prescripcion_crear')
+            except Prescripcion.DoesNotExist:
+                form.save()
+                messages.success(request, f'Prescripcion para el rut: {rut} creada con exito')
+                return redirect('prescripcion', id=id)
+                    
     else:
         form = PrescripcionForm()
     
