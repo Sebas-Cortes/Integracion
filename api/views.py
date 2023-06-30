@@ -14,7 +14,7 @@ from rest_framework import status
 def pres(request,rut):
     if request.method == 'GET':
         try:
-            pres = Prescripcion.objects.get(rutPaciente=rut, estado=False)
+            pres = Prescripcion.objects.get(rutPaciente=rut, estado=True)
             res = Receta.objects.filter(prescripcion=pres)
             serializer = RecetaSerializers(res, many=True)
             return Response(serializer.data)
