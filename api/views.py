@@ -19,7 +19,8 @@ def pres(request,rut):
             serializer = RecetaSerializers(res, many=True)
             return Response(serializer.data)
         except Prescripcion.DoesNotExist:
-            return Response(None)
+            data = {}
+            return Response(data)
 
 @api_view(['PUT'])    
 def putPres(request, rut):
