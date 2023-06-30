@@ -26,7 +26,7 @@ def prescripcion_crear(request):
             except Prescripcion.DoesNotExist:
                 form.save()
                 messages.success(request, f'Prescripcion para el rut: {rut} creada con exito')
-                return redirect('prescripcion', id=form.instance.idPrecripcion)
+                return redirect('prescripcion', id=form.instance.idPrescripcion)
                     
     else:
         form = PrescripcionForm()
