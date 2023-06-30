@@ -13,10 +13,13 @@ from rest_framework import status
 @api_view(['GET'])
 def pres(request,rut):
     if request.method == 'GET':
-        pres = Prescripcion.objects.get(rutPaciente=rut)
-        res = Receta.objects.filter(prescripcion=pres)
-        serializer = RecetaSerializers(res, many=True)
-        return Response(serializer.data)
+        try:
+            pres = Prescripcion.objects.get(rutPaciente=rut, estado=False)
+            res = Receta.objects.filter(prescripcion=pres)
+            serializer = RecetaSerializers(res, many=True)
+            return Response(serializer.data)
+        except Prescripcion.DoesNotExist:
+            return Response(None)
 
 @api_view(['PUT'])    
 def putPres(request, rut):
