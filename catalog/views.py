@@ -5,6 +5,7 @@ from catalog.models import Prescripcion, Receta
 from .forms import LoginForm, PrescripcionForm, RecetaForm, UserForm
 from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
+from catalog.services import get_med
 # Create your views here.
 
 def login(request):
@@ -12,7 +13,10 @@ def login(request):
 def menu_medico(request):
     return render(request, 'catalog/menu_medico.html')
 def medicamento(request):
-    return render(request, 'catalog/medicamento.html')
+    med = get_med()
+    print(med)
+    contexto = {'med' : med}
+    return render(request, 'catalog/medicamento.html', contexto)
 
 def prescripcion_crear(request):
     if request.method == 'POST':

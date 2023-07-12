@@ -6,13 +6,34 @@
 {% endblock titulo %}
 
 {% block all %}
-<div class="row"><h1>
-    Stock disponible:
-</h1></div>
+<div class="row">
+    <h1>
+        Stock disponible:
+    </h1>
+</div>
 <div class="row" id="cartas">
+    <div class="col-4"><a class="text-decoration-none btn btn-primary dropdown-toggle" data-bs-toggle="collapse"
+            href="#collapse{{ med.direccion|slugify }}" role="button" aria-expanded="false"
+            aria-controls="collapse{{ med.direccion|slugify }}">
+            Direccion: {{ med.direccion }}<br>
+            Comuna: {{ med.comuna }}
+
+        </a>
+    </div>
+    <div class="collapse" id="collapse{{ med.direccion|slugify }}">
+        <ol class="list-group list-group-numbered"></ol>
+        {% for l in med.lote %}
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">{{ l.tipo }}</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">{{ l.cantidad }}</span>
+        </li>
+        {% endfor %}
+        </ol>
+    </div>
 </div>
 {% endblock all %}
 
 {% block script %}
-<script src="{% static 'catalog/js/api.js' %}"></script>
 {% endblock script %}
